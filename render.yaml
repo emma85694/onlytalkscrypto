@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: onlytalkscrypto-bot
+    runtime: python
+    buildCommand: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 7599633766:AAFZeMhW4k_DDbEDUhR62hCKQ7cF4PpQanE
+      - key: PORT
+        value: 8443
+      - key: RENDER
+        value: true
+    plan: free
